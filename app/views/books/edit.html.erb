@@ -1,0 +1,23 @@
+<div style="height: 50px"></div>
+
+<% if flash[:alert] %>
+<p><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_for(@book) do |f| %>
+<div class="container">
+	<div class="raw">
+		<h1>Editing Book</h1>
+		 <h4>Title
+        <label><%= f.text_field :title, class:"book_title" %></label></h4>
+        <h4>Opinion
+    		<label>
+    			<%= f.text_field :body, class:"book_body" %>
+    		</label>
+    	</h4>
+    	<%= f.submit "Update Book" %>
+	</div>
+	<% end %>
+</div>
+<%= link_to "Show", book_path(@book), class:"book_#{@book.id}" %>
+<%= link_to "back", books_path, class:"books" %>
