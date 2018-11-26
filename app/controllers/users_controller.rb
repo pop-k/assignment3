@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
 
+	before_action :authenticate_user!, except: :home
+
 	def home
 	end
+
 
 	def user_edit
 		@user = current_user
