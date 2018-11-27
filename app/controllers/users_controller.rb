@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     	if @user.update(user_params)
     	redirect_to user_path(@user.id)
  	    else
- 	     flash[:alert] = "Introduction is too long (maximum is 50 characters)"
+ 	     flash[:alert] = "error"
  	     render action: :edit
  	    end
     end
