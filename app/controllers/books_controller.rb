@@ -26,10 +26,11 @@ class BooksController < ApplicationController
 		@book = Book.new(book_params)
 		@book.user_id = current_user.id
 		if @book.save
-		 flash[:notice] = "successfully"
-		redirect_to book_path(@book)
+			redirect_to book_path(@book)
 		else
-		 flash[:alert] = "error"
+		 @books = Book.all
+		 @user = current_user
+		 render "index"
 		end
 	end
 

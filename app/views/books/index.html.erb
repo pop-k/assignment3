@@ -1,5 +1,11 @@
 <div style="height: 50px"></div>
 
+<% if @book.errors.any? %>
+ <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+<% end %>
+
 <div class="container">
   <div class="row">
    <div class="col-xs-3">
