@@ -8,25 +8,25 @@
 	<h2>User info</h2>
     <div class="form-group">
         <h4>Name
-        <label><%= f.text_field :name, class:"name" %></label></h4>
+        <label><%= f.text_field :name, class: "name" %></label></h4>
     </div>
 
     <div class="form-group">
     	<h4>Image</h4>,
-    		<label><%= f.attachment_field :image, class: "user-edit-form", class:"user_image" %>
+    		<label><%= f.attachment_field :image, class: "user-edit-form", class: "user_image" %>
     		</label>
     </div>
 
     <div class="form-group">
     	<h4>Introduction
     		<label>
-    			<%= f.text_field :introduction, class:"introduction" %>
+    			<%= f.text_field :introduction, class: "introduction" %>
     		</label>
     	</h4>
     </div>
 
     <div>
-    <%= f.submit "Update User", class:"col-xs-1" %>
+    <%= f.submit "Update User", class: "col-xs-1" %>
 	</div>
 
 <% end %>

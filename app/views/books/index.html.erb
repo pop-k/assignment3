@@ -28,11 +28,11 @@
 <% @books.each do |book| %>
   <tbody>
 	<tr>
-		<td><%= link_to user_path(book.user), class:"user_#{book.user}" do %>
+		<td><%= link_to user_path(book.user), class: "user_#{book.user}" do %>
 				<%= attachment_image_tag book.user,:image,:fill, 40, 40,fallback: "img/no_image.jpg" %>
 			<% end %>
 		</td>
-		<td><%= link_to book_path(book), class:"book_#{book.id}" do %><%= book.title %>
+		<td><%= link_to book_path(book), class: "book_#{book.id}" do %><%= book.title %>
 			<% end %>
 		</td>
 		<td><%= book.body %></td>
